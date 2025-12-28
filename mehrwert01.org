@@ -1,0 +1,10 @@
+| Nr | Interpretation | Kommunikation | Grundidee | Konsistenzprüfung | Fehlermanagement | Machine Learning | Entscheidung | Systemanalyse | Ontologie/Semantik |
+|----|----------------|---------------|-----------|------------------|-----------------|-----------------|-------------|--------------|--------------------|
+| 1  | klar wahr | eindeutige Zustimmung | Basiswahrheit | stabil | kein Fehler | sicheres Label | ausführen | stabiler Zustand | gültige Relation |
+| 2  | klar falsch | Ablehnung | Negation | stabil | falscher Wert | fehlerhaftes Label | verwerfen | inkonsistent | ungültige Relation |
+| 3  | unbestimmt | Frage / Unsicherheit | Offenheit | unentschieden | fehlende Info | fehlende Daten | warten | neutral | unvollständige Entität |
+| 4  | widersprüchlich | Konflikt | Ambivalenz | fehlerhaft | Widerspruch | doppelte Labels | Konfliktlösung | Deadlock | Mehrdeutigkeit |
+| 5  | dinglich | Faktisch, konkret | Materialität | überprüfbar | Sensorfehler | reale Messung | verifizieren | Ressourcenzustand | physische Entität |
+| 6  | stapelbar | kombinierbar | Weiterentwicklung | reproduzierbar | Versionsfehler | inkrementelles Lernen | optimieren | modulare Iteration | evolutionäres Konzept |
+| 7  | ursprungsanalytisch | retrospektiv | Rückverfolgung | Basisvergleich | Log-Historie | Datentrace | Ursache bestimmen | Regressionsprüfung | Herkunftsstruktur |
+| 8  | systemisch-vernetzt | Metaebene | Integration | Gesamtkonsistenz | globale Konflikte | Meta-Layer | Gesamtentscheidung | Querschnittsanalyse | semantische Kohärenz |    

@@ -1,0 +1,8 @@
+| Wert | Zusammensetzung (W1,W2,W3) | Bedeutung |
+|------+----------------------------+-----------|
+| T    | (T,T,T)                    | wahr, konsistent |
+| F    | (F,F,F)                    | falsch, inkonsistent |
+| N    | (N,N,N) oder teilweise N   | unbestimmt |
+| B    | Kombination von T und F    | Widerspruch |
+| D    | (T,T,x)                    | dinglich, überprüfbar |
+| S    | (T/N,T/N,T)                | stapelbar, entwicklungsfähig |

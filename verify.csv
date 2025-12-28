@@ -1,0 +1,7 @@
+Wert,Ontologische Bedeutung,Fehler-/Algorithmus-Bedeutung
+T,"Entität existiert / korrekt","richtig, konsistent"
+F,"existiert nicht / inkorrekt","klassisch falsch"
+N,unbestimmt,"unvollständige Information"
+B,widersprüchlich,"Logikfehler / Ambivalenz"
+D,dinglich,"algorithmisch überprüfbar"
+S,stapelbar,"iterativ / fortschrittlich"
