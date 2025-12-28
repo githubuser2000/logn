@@ -1,189 +1,238 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>16-Werte-Logik-Matrix Fancy</title>
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #f0f8ff, #e6e6fa);
-    padding: 20px;
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    animation: fadeIn 2s ease-in;
-  }
-  th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-    transition: transform 0.3s, background 0.3s;
-  }
-  th {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    font-size: 14px;
-  }
-  tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.6);
-  }
-  tr:hover td {
-    transform: scale(1.03);
-    background: rgba(255, 240, 200, 0.7);
-  }
-  td {
-    font-size: 12px;
-  }
-  .emoji {
-    font-size: 16px;
-    margin-right: 4px;
-  }
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-Werte-Logik-Matrix</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --accent-primary: #38bdf8; /* Hellblau */
+            --accent-secondary: #fbbf24; /* Bernstein (Komplementär) */
+            --gradient-1: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            --gradient-row-1: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, rgba(15, 23, 42, 0) 100%);
+            --gradient-row-2: linear-gradient(90deg, rgba(251, 191, 36, 0.1) 0%, rgba(15, 23, 42, 0) 100%);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            overflow-x: auto;
+        }
+
+        h1 {
+            text-align: center;
+            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .matrix-wrapper {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow: hidden;
+            background: var(--gradient-1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--accent-primary);
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid var(--accent-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Farbübergänge für Ebenen-Logik */
+        tr:nth-child(odd) { background: var(--gradient-row-1); }
+        tr:nth-child(even) { background: var(--gradient-row-2); }
+
+        tr:hover {
+            transform: scale(1.005);
+            background: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: inset 0 0 10px rgba(56, 189, 248, 0.2);
+        }
+
+        td {
+            padding: 12px 15px;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .nr-badge {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: var(--accent-primary);
+            color: var(--bg-dark);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+        }
+
+        .meta-row {
+            color: var(--accent-secondary);
+        }
+
+        .sticky-col {
+            position: sticky;
+            left: 0;
+            background: #1e293b;
+            z-index: 10;
+        }
+
+        /* Kleine pulsierende Animation für Ontologische Objekte */
+        .pulse {
+            display: inline-block;
+            animation: soft-pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes soft-pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .r-kontinuum {
+            font-style: italic;
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 <body>
 
-<h2 style="text-align:center;">🧠 16-Werte-Logik-Matrix mit R-Kontinuum und Ontologisches Objekt</h2>
+    <h1>✨ 16-Werte-Logik & Ontologie-Matrix ✨</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nr</th>
-      <th>Interpretation</th>
-      <th>Kommunikation</th>
-      <th>Grundidee</th>
-      <th>Konsistenzprüfung</th>
-      <th>Fehlermanagement</th>
-      <th>Machine Learning</th>
-      <th>Entscheidung</th>
-      <th>Systemanalyse</th>
-      <th>Ontologie/Semantik</th>
-      <th>Meta-Interpretation</th>
-      <th>Meta-Kommunikation</th>
-      <th>Meta-Kohärenz</th>
-      <th>Reflexionsgrad</th>
-      <th>Adaptivität</th>
-      <th>Interferenzkontrolle</th>
-      <th>Meta-Systemzustand</th>
-      <th>R-Kontinuum</th>
-      <th>Ontologisches Objekt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>klar wahr</td>
-      <td>Zustimmung</td>
-      <td>Basiswahrheit</td>
-      <td>stabil</td>
-      <td>kein Fehler</td>
-      <td>sicheres Label</td>
-      <td>ausführen</td>
-      <td>stabiler Zustand</td>
-      <td>gültige Relation</td>
-      <td>selbstkonsistent</td>
-      <td>explizit wahrnehmbar</td>
-      <td>logisch kohärent</td>
-      <td>0</td>
-      <td>konstant</td>
-      <td>keine</td>
-      <td>stationär</td>
-      <td>Linguistik statt Sprache: Sprachwissenschaft, semantisch über Bedeutung über Ontologien</td>
-      <td><span class="emoji">🌟</span>Wahrheitswert-Instanz: stabile Entität für Entscheidungslogik</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>klar falsch</td>
-      <td>Ablehnung</td>
-      <td>Negation</td>
-      <td>stabil</td>
-      <td>falscher Wert</td>
-      <td>fehlerhaftes Label</td>
-      <td>verwerfen</td>
-      <td>inkonsistent</td>
-      <td>ungültige Relation</td>
-      <td>selbstnegierend</td>
-      <td>Ablehnungs-Echo</td>
-      <td>logisch invertiert</td>
-      <td>0</td>
-      <td>konstant</td>
-      <td>keine</td>
-      <td>stationär</td>
-      <td>Wechselwirkung: semantisches ontologisches Tripel, analog Meta-Physik-Teilchen, Datenbank-Tripel-Store</td>
-      <td><span class="emoji">❌</span>Negationsinstanz: überprüfbares Gegenstück zu Wahrheitswerten</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>unbestimmt</td>
-      <td>Frage / Unsicherheit</td>
-      <td>Offenheit</td>
-      <td>unentschieden</td>
-      <td>fehlende Info</td>
-      <td>fehlende Daten</td>
-      <td>warten</td>
-      <td>neutral</td>
-      <td>unvollständige Entität</td>
-      <td>potenziell stabil</td>
-      <td>explorativ</td>
-      <td>epistemisch offen</td>
-      <td>1</td>
-      <td>dynamisch</td>
-      <td>gering</td>
-      <td>meta-neutral</td>
-      <td>Zeichen, Bezeichner, z.B. Namen, Symbole</td>
-      <td><span class="emoji">❓</span>Unsicherheitsmodell: Platzhalterobjekt für fehlende oder unvollständige Information</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>widersprüchlich</td>
-      <td>Konflikt</td>
-      <td>Ambivalenz</td>
-      <td>fehlerhaft</td>
-      <td>Widerspruch</td>
-      <td>doppelte Labels</td>
-      <td>Konfliktlösung</td>
-      <td>Deadlock</td>
-      <td>Mehrdeutigkeit</td>
-      <td>rekursiv oszillierend</td>
-      <td>paradox kommunizierend</td>
-      <td>logisch zweiseitig</td>
-      <td>2</td>
-      <td>oszillierend</td>
-      <td>stark</td>
-      <td>metastabil</td>
-      <td>Inhalt</td>
-      <td><span class="emoji">⚡</span>Konfliktknoten: dynamisches Objekt, repräsentiert Widersprüche</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>dinglich</td>
-      <td>Faktisch, konkret</td>
-      <td>Materialität</td>
-      <td>überprüfbar</td>
-      <td>Sensorfehler</td>
-      <td>reale Messung</td>
-      <td>verifizieren</td>
-      <td>Ressourcenzustand</td>
-      <td>physische Entität</td>
-      <td>empirisch validiert</td>
-      <td>physisch rückgekoppelt</td>
-      <td>messbar konsistent</td>
-      <td>1</td>
-      <td>adaptiv</td>
-      <td>gering</td>
-      <td>stabilisiert</td>
-      <td>Syntax: Komma, Punkt, Leerzeichen, Absatz, Anführungszeichen etc.</td>
-      <td><span class="emoji">📦</span>Faktische Entität: physische oder messbare Einheit</td>
-    </tr>
-    <!-- Hier können alle weiteren Zeilen analog ergänzt werden -->
-  </tbody>
-</table>
+    <div class="matrix-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nr</th>
+                    <th>Interpretation</th>
+                    <th>Kommunikation</th>
+                    <th>Grundidee</th>
+                    <th>Systemanalyse</th>
+                    <th>Reflexion</th>
+                    <th>R-Kontinuum (Linguistik/Semantik)</th>
+                    <th>Ontologisches Objekt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="nr-badge">1</span></td>
+                    <td><b>Klar wahr</b></td>
+                    <td>✅ Zustimmung</td>
+                    <td>Basiswahrheit</td>
+                    <td>Stabiler Zustand</td>
+                    <td>0</td>
+                    <td class="r-kontinuum">Linguistik statt Sprache</td>
+                    <td><span class="pulse">🌟</span> Wahrheitswert-Instanz</td>
+                </tr>
+                <tr>
+                    <td><span class="nr-badge">2</span></td>
+                    <td><b>Klar falsch</b></td>
+                    <td>❌ Ablehnung</td>
+                    <td>Negation</td>
+                    <td>Inkonsistent</td>
+                    <td>0</td>
+                    <td class="r-kontinuum">Semantisches Tripel</td>
+                    <td><span class="pulse">🚫</span> Negationsinstanz</td>
+                </tr>
+                <tr>
+                    <td><span class="nr-badge">3</span></td>
+                    <td><b>Unbestimmt</b></td>
+                    <td>❓ Frage</td>
+                    <td>Offenheit</td>
+                    <td>Neutral</td>
+                    <td>1</td>
+                    <td class="r-kontinuum">Zeichen & Symbole</td>
+                    <td><span class="pulse">❔</span> Unsicherheitsmodell</td>
+                </tr>
+                <tr>
+                    <td><span class="nr-badge">4</span></td>
+                    <td><b>Widersprüchlich</b></td>
+                    <td>⚡ Konflikt</td>
+                    <td>Ambivalenz</td>
+                    <td>Deadlock</td>
+                    <td>2</td>
+                    <td class="r-kontinuum">Inhalt / Spannung</td>
+                    <td><span class="pulse">💥</span> Konfliktknoten</td>
+                </tr>
+                <tr class="meta-row">
+                    <td><span class="nr-badge" style="background:var(--accent-secondary)">5</span></td>
+                    <td><b>Dinglich</b></td>
+                    <td>📦 Faktisch</td>
+                    <td>Materialität</td>
+                    <td>Ressource</td>
+                    <td>1</td>
+                    <td class="r-kontinuum">Syntax: Zeichensetzung</td>
+                    <td><span class="pulse">🧱</span> Faktische Entität</td>
+                </tr>
+                <tr class="meta-row">
+                    <td><span class="nr-badge" style="background:var(--accent-secondary)">8</span></td>
+                    <td><b>Systemisch</b></td>
+                    <td>🌐 Vernetzt</td>
+                    <td>Integration</td>
+                    <td>Querschnitt</td>
+                    <td>4</td>
+                    <td class="r-kontinuum">Gestaltung & Stil</td>
+                    <td><span class="pulse">🕸️</span> Systemknoten</td>
+                </tr>
+                <tr style="border-top: 3px solid var(--accent-secondary)">
+                    <td><span class="nr-badge">9</span></td>
+                    <td><b>Meta-wahr</b></td>
+                    <td>💎 Selbstbestätigung</td>
+                    <td>Wahrheit 2. Ordnung</td>
+                    <td>Selbstanalytisch</td>
+                    <td>5</td>
+                    <td class="r-kontinuum">Sprach-Kosmos</td>
+                    <td><span class="pulse">🧩</span> Meta-Wahrheit</td>
+                </tr>
+                <tr>
+                    <td><span class="nr-badge">12</span></td>
+                    <td><b>Meta-Widerspruch</b></td>
+                    <td>⚖️ Dialektik</td>
+                    <td>Spannung</td>
+                    <td>Meta-Deadlock</td>
+                    <td>6</td>
+                    <td class="r-kontinuum">Interkonnektion</td>
+                    <td><span class="pulse">☯️</span> Meta-Konfliktknoten</td>
+                </tr>
+                <tr class="meta-row">
+                    <td><span class="nr-badge" style="background:var(--accent-secondary)">16</span></td>
+                    <td><b>Meta-systemisch</b></td>
+                    <td>🏛️ Allumfassend</td>
+                    <td>Ganzheit</td>
+                    <td>Ganzsystem</td>
+                    <td>8</td>
+                    <td class="r-kontinuum">Fließendes Reden (Reißverschluss)</td>
+                    <td><span class="pulse">🌌</span> Holistischer Knoten</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>
+
