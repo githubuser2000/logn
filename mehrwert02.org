@@ -1,0 +1,18 @@
+| Nr | Operator-Kombination        | Existenz | Konsistenz | Verifizierbarkeit | Meta-Stabilität | Bedeutung                          | Debugging-Sicht              | Ontologie / Semantik            |
+|----+-----------------------------+----------+------------+-------------------+-----------------+------------------------------------+-----------------------------+---------------------------------|
+|  1 | T ∧ T                       | ja       | ja         | ja                | stabil          | wahr, konsistent                   | kein Fehler                 | gültige Relation                |
+|  2 | F ∧ F                       | nein     | nein       | nein              | stabil          | falsch, nicht existent             | verwerfen                   | ungültige Relation              |
+|  3 | N ∧ N                       | unbekannt| unbestimmt | nicht prüfbar     | neutral         | unbestimmt                         | fehlende Daten              | unvollständige Entität          |
+|  4 | T ∧ F                       | ja       | nein       | teilweise         | instabil        | widersprüchlich                    | Konflikt / Inkonsistenz     | Ambivalenz                      |
+|  5 | (T,T,x)                     | ja       | ja         | messbar           | stabil          | dinglich / konkret                 | Messung möglich             | materielle Entität              |
+|  6 | (T/N,T/N,T)                 | teilweise| teilweise  | kombinierbar       | progressiv      | stapelbar / entwicklungsfähig      | iterativ / lernfähig        | evolutionäres Konzept           |
+|  7 | (T ∧ F) ∨ (N ∧ B)           | gemischt | gemischt   | rückführbar       | analytisch      | ursprungsanalytisch               | Trace / Ursache bestimmen   | Herkunftsstruktur               |
+|  8 | (D ∨ S) ∧ (B ∨ N)           | systemisch| meta      | kontextabhängig   | global          | systemisch-vernetzt                | Cross-Konsistenz            | semantische Kohärenz           |
+|  9 | T mit Risiko-Unsicherheit   | ja       | teilweise  | eingeschränkt     | fragil          | wahr aber riskant                  | Warnzustand                 | prekäre Gültigkeit              |
+| 10 | F mit plausibler Evidenz    | nein     | teilweise  | hypothetisch      | fragil          | wahrscheinlich falsch              | Review erforderlich         | schwache Negation               |
+| 11 | N mit T-Tendenz             | offen    | latent     | optional          | wachsend        | unbestimmt mit Wachstumsrichtung   | explorativ                  | potenzielle Entität             |
+| 12 | N mit F-Tendenz             | offen    | latent     | schwach           | abnehmend       | unbestimmt mit Zerfallsrichtung    | regressiv                   | zerfallende Struktur            |
+| 13 | B stabilisiert kontextuell  | gemischt | teil-kohärent | selektiv       | semi-stabil     | konfliktgebunden aber steuerbar    | Konflikt-Management         | kontextuelle Ambivalenz         |
+| 14 | B chaotisch / oszillierend  | gemischt | instabil   | kaum prüfbar      | chaotisch       | widerspruch-dominant               | Deadlock-Risiko             | Mehrdeutigkeit ohne Fixpunkt    |
+| 15 | D in Meta-Referenz          | ja       | ja         | messbar-übergreifend | meta       | dinglich + systemischer Bezug      | Audit-Ebene                 | physisch-semantische Kopplung   |
+| 16 | S in globaler Iteration     | wachsend | kohärent   | verteilbar        | evolutionär     | stapelbar auf System-Skala         | Lern-/Upgrade-Zustand       | emergente Struktur              |
