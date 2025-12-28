@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-Werte-Logik-Matrix – Bunte Kachel-Ansicht</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 20px;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            color: #333;
+            line-height: 1.5;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+        .card {
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            color: white;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+        }
+        .nr {
+            font-size: 3em;
+            font-weight: 900;
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            opacity: 0.3;
+        }
+        .emoji {
+            font-size: 3.5em;
+            display: block;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        }
+        .interpretation {
+            font-size: 1.6em;
+            margin-bottom: 12px;
+        }
+        .details {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+        .details strong {
+            display: inline-block;
+            min-width: 140px;
+        }
+
+        /* Komplementärfarben mit sanften Verläufen – jede Karte ein anderes Paar */
+        .card:nth-child(16n+1)  { background: linear-gradient(135deg, #FF6B6B, #4ECDC4); } /* Rot ↔ Türkis */
+        .card:nth-child(16n+2)  { background: linear-gradient(135deg, #FFE66D, #6B5B95); } /* Gelb ↔ Lila */
+        .card:nth-child(16n+3)  { background: linear-gradient(135deg, #88D498, #F7A278); } /* Grün ↔ Orange */
+        .card:nth-child(16n+4)  { background: linear-gradient(135deg, #A8E6CF, #D68FD6); } /* Mint ↔ Pink */
+        .card:nth-child(16n+5)  { background: linear-gradient(135deg, #FFD3B6, #6A0572); } /* Pfirsich ↔ Magenta */
+        .card:nth-child(16n+6)  { background: linear-gradient(135deg, #C7CEEA, #FF9AA2); } /* Lavendel ↔ Koralle */
+        .card:nth-child(16n+7)  { background: linear-gradient(135deg, #B2F7EF, #F2789F); } /* Helltürkis ↔ Rosa */
+        .card:nth-child(16n+8)  { background: linear-gradient(135deg, #9ADCFF, #FFB6B9); } /* Hellblau ↔ Hellrosa */
+        .card:nth-child(16n+9)  { background: linear-gradient(135deg, #FFA07A, #98D8C8); } /* Lachs ↔ Mintgrün */
+        .card:nth-child(16n+10) { background: linear-gradient(135deg, #C2D4FF, #FF9F1C); } /* Hellblau ↔ Orange */
+        .card:nth-child(16n+11) { background: linear-gradient(135deg, #E0BBE4, #95E1D3); } /* Flieder ↔ Aquamarin */
+        .card:nth-child(16n+12) { background: linear-gradient(135deg, #FEC8D8, #BDE0FE); } /* Hellrosa ↔ Hellblau */
+        .card:nth-child(16n+13) { background: linear-gradient(135deg, #D291BC, #FEC8D8); } /* Violettrosa ↔ Zartrosa */
+        .card:nth-child(16n+14) { background: linear-gradient(135deg, #A2D2FF, #FFCAD4); } /* Hellblau ↔ Pastellrosa */
+        .card:nth-child(16n+15) { background: linear-gradient(135deg, #B9FBC0, #FFC09F); } /* Hellgrün ↔ Apricot */
+        .card:nth-child(16n+16) { background: linear-gradient(135deg, #9BDEFE, #FEC196); } /* Himmelblau ↔ Pfirsichorange */
+    </style>
+</head>
+<body>
+
+    <h1>16-Werte-Logik-Matrix<br><small>bunte Kachel-Ansicht mit Emoticons und Komplementärfarben</small></h1>
+
+    <div class="grid-container">
+
+        <div class="card">
+            <div class="nr">1</div>
+            <div class="emoji">🌟</div>
+            <div class="interpretation">klar wahr</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Zustimmung<br>
+                <strong>Grundidee:</strong> Basiswahrheit<br>
+                <strong>Reflexionsgrad:</strong> 0<br>
+                <strong>R-Kontinuum:</strong> Linguistik statt Sprache<br>
+                <strong>Ontologisches Objekt:</strong> Wahrheitswert-Instanz
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">2</div>
+            <div class="emoji">❌</div>
+            <div class="interpretation">klar falsch</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Ablehnung<br>
+                <strong>Grundidee:</strong> Negation<br>
+                <strong>Reflexionsgrad:</strong> 0<br>
+                <strong>R-Kontinuum:</strong> Wechselwirkung (Tripel)<br>
+                <strong>Ontologisches Objekt:</strong> Negationsinstanz
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">3</div>
+            <div class="emoji">❓</div>
+            <div class="interpretation">unbestimmt</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Frage / Unsicherheit<br>
+                <strong>Grundidee:</strong> Offenheit<br>
+                <strong>Reflexionsgrad:</strong> 1<br>
+                <strong>R-Kontinuum:</strong> Zeichen, Bezeichner<br>
+                <strong>Ontologisches Objekt:</strong> Unsicherheitsmodell
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">4</div>
+            <div class="emoji">⚡</div>
+            <div class="interpretation">widersprüchlich</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Konflikt<br>
+                <strong>Grundidee:</strong> Ambivalenz<br>
+                <strong>Reflexionsgrad:</strong> 2<br>
+                <strong>R-Kontinuum:</strong> Inhalt<br>
+                <strong>Ontologisches Objekt:</strong> Konfliktknoten
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">5</div>
+            <div class="emoji">📦</div>
+            <div class="interpretation">dinglich</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Faktisch, konkret<br>
+                <strong>Grundidee:</strong> Materialität<br>
+                <strong>Reflexionsgrad:</strong> 1<br>
+                <strong>R-Kontinuum:</strong> Syntax (Komma, Punkt…)<br>
+                <strong>Ontologisches Objekt:</strong> Faktische Entität
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">6</div>
+            <div class="emoji">🔄</div>
+            <div class="interpretation">stapelbar</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> kombinierbar<br>
+                <strong>Grundidee:</strong> Weiterentwicklung<br>
+                <strong>Reflexionsgrad:</strong> 2<br>
+                <strong>R-Kontinuum:</strong> Informations-Einheit<br>
+                <strong>Ontologisches Objekt:</strong> Evolvierbare Komponente
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">7</div>
+            <div class="emoji">🔍</div>
+            <div class="interpretation">ursprungsanalytisch</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> retrospektiv<br>
+                <strong>Grundidee:</strong> Rückverfolgung<br>
+                <strong>Reflexionsgrad:</strong> 3<br>
+                <strong>R-Kontinuum:</strong> Wort<br>
+                <strong>Ontologisches Objekt:</strong> Ursprungs-Trace
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">8</div>
+            <div class="emoji">🌐</div>
+            <div class="interpretation">systemisch-vernetzt</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Metaebene<br>
+                <strong>Grundidee:</strong> Integration<br>
+                <strong>Reflexionsgrad:</strong> 4<br>
+                <strong>R-Kontinuum:</strong> Gestaltung<br>
+                <strong>Ontologisches Objekt:</strong> Systemknoten
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">9</div>
+            <div class="emoji">🧩</div>
+            <div class="interpretation">meta-wahr</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Selbstbestätigung<br>
+                <strong>Grundidee:</strong> Wahrheit zweiter Ordnung<br>
+                <strong>Reflexionsgrad:</strong> 5<br>
+                <strong>R-Kontinuum:</strong> Sprach-Kosmos<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Wahrheitsinstanz
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">10</div>
+            <div class="emoji">❎</div>
+            <div class="interpretation">meta-falsch</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Meta-Negation<br>
+                <strong>Grundidee:</strong> Verwerfungsstruktur<br>
+                <strong>Reflexionsgrad:</strong> 5<br>
+                <strong>R-Kontinuum:</strong> Token-Art<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Negationsinstanz
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">11</div>
+            <div class="emoji">🌀</div>
+            <div class="interpretation">meta-unbestimmt</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Meta-Unschärfe<br>
+                <strong>Grundidee:</strong> epistemische Offenheit<br>
+                <strong>Reflexionsgrad:</strong> 6<br>
+                <strong>R-Kontinuum:</strong> Bedeutung<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Unsicherheitsmodell
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">12</div>
+            <div class="emoji">⚖️</div>
+            <div class="interpretation">meta-widersprüchlich</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Meta-Konflikt<br>
+                <strong>Grundidee:</strong> dialektische Spannung<br>
+                <strong>Reflexionsgrad:</strong> 6<br>
+                <strong>R-Kontinuum:</strong> Zusammenhang<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Konfliktknoten
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">13</div>
+            <div class="emoji">🧱</div>
+            <div class="interpretation">meta-dinglich</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> Meta-Faktisch<br>
+                <strong>Grundidee:</strong> physisch verankerte Meta-Relation<br>
+                <strong>Reflexionsgrad:</strong> 7<br>
+                <strong>R-Kontinuum:</strong> Wortgruppe, Satzstruktur<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Faktische Entität
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">14</div>
+            <div class="emoji">🌱</div>
+            <div class="interpretation">meta-stapelbar</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> rekombinierbar<br>
+                <strong>Grundidee:</strong> Meta-Entwicklung<br>
+                <strong>Reflexionsgrad:</strong> 7<br>
+                <strong>R-Kontinuum:</strong> Deutung, Satzbezug<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Evolvierbare Komponente
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">15</div>
+            <div class="emoji">🕰️</div>
+            <div class="interpretation">meta-ursprünglich</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> archaisch-reflexiv<br>
+                <strong>Grundidee:</strong> Ursprung zweiter Ordnung<br>
+                <strong>Reflexionsgrad:</strong> 8<br>
+                <strong>R-Kontinuum:</strong> Verbindung (und, oder…)<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Ursprungs-Trace
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="nr">16</div>
+            <div class="emoji">🏛️</div>
+            <div class="interpretation">meta-systemisch</div>
+            <div class="details">
+                <strong>Kommunikation:</strong> allumfassend<br>
+                <strong>Grundidee:</strong> integrative Ganzheit<br>
+                <strong>Reflexionsgrad:</strong> 8<br>
+                <strong>R-Kontinuum:</strong> Fließendes Reden<br>
+                <strong>Ontologisches Objekt:</strong> Meta-Systemknoten
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
