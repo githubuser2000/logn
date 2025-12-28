@@ -1,0 +1,312 @@
+Sehr gut — ich ergänze zwei zusätzliche Spalten, beide ontologisch-semantisch, aber auf verschiedenen Abstraktionsebenen:
+Begriffsontologie – benennt, auf welcher Art von Entität oder Begriffsebene (z. B. Fakt, Konzept, Prozess, System, Relation, Reflexion etc.) sich der jeweilige Logikzustand befindet.
+Semantische Dynamik – beschreibt, wie sich Bedeutung in diesem Zustand verhält (z. B. statisch, emergent, diffundierend, selbstreferenziell, holistisch usw.).
+Hier ist die erweiterte 16-wertige Logik-Matrix mit diesen zwei neuen Spalten:
+🧩 16-Wertige Logik-Matrix (semantisch-ontologisch-systemisch erweitert)
+Interpretation 2. Ordnung
+Kommunikation 2. Ordnung
+Nr
+Interpretation
+Kommunikation
+Grundidee
+Konsistenzprüfung
+Fehlermanagement
+Machine Learning
+Entscheidung
+Systemanalyse
+Ontologie/Semantik
+Kohärenzebene
+Reflexionsgrad
+Adaptivität
+Systemzustand
+Begriffsontologie
+Semantische Dynamik
+1
+klar wahr
+Zustimmung
+Basiswahrheit
+stabil
+kein Fehler
+sicheres Label
+ausführen
+stabiler Zustand
+gültige Relation
+selbstkonsistent
+explizit wahrnehmbar
+logisch kohärent
+0
+konstant
+stationär
+Fakt / Proposition
+statisch eindeutig
+2
+klar falsch
+Ablehnung
+Negation
+stabil
+falscher Wert
+fehlerhaftes Label
+verwerfen
+inkonsistent
+ungültige Relation
+selbstnegierend
+Ablehnungs-Echo
+logisch invertiert
+0
+konstant
+stationär
+Antifakt / Negation
+statisch geschlossen
+3
+unbestimmt
+Frage / Unsicherheit
+Offenheit
+unentschieden
+fehlende Info
+fehlende Daten
+warten
+neutral
+unvollständige Entität
+potenziell stabil
+explorativ
+epistemisch offen
+1
+dynamisch
+meta-neutral
+Potenzial / Unbestimmtheit
+emergent offen
+4
+widersprüchlich
+Konflikt
+Ambivalenz
+fehlerhaft
+Widerspruch
+doppelte Labels
+Konfliktlösung
+Deadlock
+Mehrdeutigkeit
+rekursiv oszillierend
+paradox kommunizierend
+logisch zweiseitig
+2
+oszillierend
+metastabil
+Paradoxon / Dualität
+oszillierend semantisch
+5
+systemisch-faktisch
+Protokollierung
+Materialität
+überprüfbar
+Sensorfehler
+reale Messung
+verifizieren
+Ressourcenzustand
+physische Entität
+empirisch validiert
+rückgekoppelt
+messbar konsistent
+1
+adaptiv
+stabilisiert
+Objekt / Entität
+konkret stabil
+6
+trace-stapelbar
+kombinierbar
+Weiterentwicklung
+reproduzierbar
+Versionsfehler
+inkrementelles Lernen
+optimieren
+modulare Iteration
+evolutionäres Konzept
+rekursiv lernend
+selbstverstärkend
+progressiv
+2
+hoch
+evolutionär
+Prozess / Sequenz
+rekursiv steigend
+7
+audit-analytisch
+retrospektiv
+Rückverfolgung
+Basisvergleich
+Log-Historie
+Datentrace
+Ursache bestimmen
+Regressionsprüfung
+Herkunftsstruktur
+historisch überprüfend
+rückwärtskonsistent
+selbsterklärend
+3
+konstant
+rekonstruierend
+Relation / Ursache
+retroaktiv verbindend
+8
+regel-vernetzt
+Integrationsschicht
+Gesamtkohärenz
+globale Konflikte
+Steuerungskonflikt
+Layer-Koordination
+Gesamtentscheidung
+Querschnittsanalyse
+semantische Kohärenz
+architektur-kohärent
+intersystemisch
+übergreifend stabil
+4
+adaptiv
+global stabil
+System / Netzwerk
+integrativ selbststabilisierend
+9
+reflexiv-wahr
+Selbstbestätigung
+Wahrheit zweiter Ordnung
+reflexiv stabil
+keine Reflexionsfehler
+stabile Meta-Labels
+automatisieren
+selbstanalytisch
+Relation zweiter Ordnung gültig
+auto-kohärent
+metasprachlich
+logisch geschlossen
+5
+hoch
+überstabil
+Selbstreferenz / Reflexion
+zirkulär stabil
+10
+reflexiv-falsch
+Negation zweiter Ordnung
+Verwerfungsstruktur
+konsistent
+Reflexionsfehler erkannt
+fehlerhafte Reflexionslabels
+metaverwerfen
+Inkonstanz zweiter Ordnung
+ungültige Relation 2. Ordnung
+auto-negierend
+selbstwidersprechend
+logisch invertiert
+5
+hoch
+oszillierend
+Widerspruch / Antireflexion
+zirkulär instabil
+11
+rekursiv-offen
+epistemische Offenheit
+Unschärfe höherer Ordnung
+instabil
+unklare Rückkopplung
+unsichere Daten
+Metawarten
+semineutral
+Unvollständigkeit höherer Ordnung
+semitransparent
+kommunikativ offen
+epistemisch durchlässig
+6
+adaptiv
+diffundierend
+Möglichkeit / Konzeptfeld
+diffus emergent
+12
+rekursiv-konfliktär
+dialektische Spannung
+metastabil
+Widerspruch zweiter Ordnung
+doppelte Rückkopplung
+Konfliktlösung auf Reflexionsebene
+Meta-Deadlock
+Mehrdeutigkeit höherer Ordnung
+dialektisch
+selbstoszillierend
+logisch beidwertig
+6
+oszillierend
+metastabil
+Dialektik / Antinomie
+oszillierend divergent
+
+13
+hyper-dinglich
+physisch verankert
+faktische Ganzheit
+überprüfbar
+Messfehler höherer Ordnung
+reale Meta-Messung
+Hyper-Verifikation
+Ressourcentrace
+physische Hyper-Entität
+empirisch verankert
+sensorisch
+mesologisch
+7
+gering
+stabilisiert
+Materielle Struktur / Körper
+verankert stabil
+14
+hyper-evolutionär
+rekombinierbar
+Systementwicklung
+reproduzierbar
+Versionsfehler
+iteratives Lernen
+Optimierung
+Meta-Iteration
+evolutionäre Hyper-Kohärenz
+hyperprogressiv
+rekursiv adaptiv
+evolutionär offen
+7
+sehr hoch
+meta-evolutionär
+Entwicklungsraum / Morphologie
+progressiv wachsend
+15
+kontext-ursprünglich
+archaisch-reflexiv
+Ursprung zweiter Ordnung
+rekursiv verankert
+historische Schicht
+Rückkopplungsdaten
+Ursache höherer Ordnung
+Ursprungsrekursion
+Proto-Ontologie
+archontisch
+retroaktiv
+historisch-reflexiv
+8
+stabil
+rekursiv
+Archetyp / Urform
+zyklich-konservativ
+16
+holistisch-systemisch
+integrative Ganzheit
+globale Kohärenz
+Konflikt-Regelung
+Layer-Fusion
+Gesamtentscheidung
+Ganzsystemanalyse
+semantische Hyper-Kohärenz
+holistisch integriert
+intermodal
+hyperkohärent
+total kohärent
+8
+adaptiv
+global-stabil
+Gesamtsystem / Kontextfeld
+holistisch integrierend
+Willst du, dass ich diese Version in Emacs Org-Mode konvertiere (mit |-Tabellenstruktur, Hervorhebungen, Kategorienfarben und Metadatenblöcken für ML-Verarbeitung)?
